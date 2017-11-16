@@ -1,13 +1,14 @@
-package service;
+package service.implementation;
 
 import dao.AgentDao;
 import models.Agent;
 import org.springframework.beans.factory.annotation.Autowired;
+import service.AgentService;
 
 import java.util.List;
 
 
-public class AgentServiceImpl implements AgentService{
+public class AgentServiceImpl implements AgentService {
 
     @Autowired
     AgentDao agentDao;

@@ -1,5 +1,6 @@
-package dao;
+package dao.implementation;
 
+import dao.AgentDao;
 import models.Agent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,7 +9,7 @@ import rowdata.AgentMapper;
 import javax.sql.DataSource;
 import java.util.*;
 
-public class AgentDaoImpl implements AgentDao{
+public class AgentDaoImpl implements AgentDao {
 
     @Autowired
     DataSource dataSource;

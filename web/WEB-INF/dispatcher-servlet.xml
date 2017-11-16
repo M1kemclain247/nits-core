@@ -21,9 +21,11 @@
 
     <!-- declare beans -->
 
-    <bean id="agentDao" class="dao.AgentDaoImpl" />
-    <bean id="agentService" class="service.AgentServiceImpl" />
+    <bean id="agentDao" class="dao.implementation.AgentDaoImpl" />
+    <bean id="agentService" class="service.implementation.AgentServiceImpl" />
 
+    <bean id="agentContactDao" class="dao.implementation.AgentContactDaoImpl" />
+    <bean id="agentContactService" class="service.implementation.AgentContactServiceImpl" />
 
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource" />

@@ -49,7 +49,7 @@ public class AgentMapper implements RowMapper<Agent> {
 
 
             JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
-            a.setContacts(jdbcTemplate.query(sql,new AgentContactMapper()));
+            a.setContacts(jdbcTemplate.query(sql,new AgentContactMapper(dataSource)));
 
             return a;
         }

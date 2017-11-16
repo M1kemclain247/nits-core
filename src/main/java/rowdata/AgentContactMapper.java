@@ -5,10 +5,17 @@ import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 
+import javax.sql.DataSource;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class AgentContactMapper implements RowMapper<AgentContact> {
+
+    private DataSource dataSource;
+
+    public AgentContactMapper(DataSource dataSource){
+        this.dataSource = dataSource;
+    }
 
     @Override
     public AgentContact mapRow(ResultSet rs, int i) throws SQLException {
